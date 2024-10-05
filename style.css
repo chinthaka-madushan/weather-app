@@ -1,0 +1,32 @@
+.video{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.topBar{
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.topRightBar{
+    position: fixed;
+    right: 2%;
+    top: 20px;
+    color: antiquewhite;
+}
+.currentBar{
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 95%;
+    background-color: rgba(216, 222, 228, 0.915);
+}
+#lo_name{
+    font-weight: bold;
+}
+.tbleka{
+    margin: auto;
+    outline: black solid;
+}
+
