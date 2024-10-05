@@ -1,4 +1,5 @@
-
+let loDate = new Date()
+console.log(loDate.getDay());
 let key = "22b87b2303e84cbdaee92004243009";
 let loc;
 currentWeather();
@@ -13,7 +14,7 @@ function currentWeather(){
         document.getElementById("lo_imgTxt").innerText = obj.current.condition.text;
         document.getElementById("lo_tempc").innerText = obj.current.temp_c+" °C   _________ "+obj.current.temp_f+" F";
         document.getElementById("tableC").innerHTML = `<tr>
-                                                            <th>wind_mph</th>
+                                                                                                      <th>wind_mph</th>
                                                             <th>wind_kph</th>
                                                             <th>wind_degree</th>
                                                             <th>pressure_mb</th>
@@ -30,9 +31,35 @@ function currentWeather(){
                                                             <td>${obj.current.humidity}</td>
                                                             <td>${obj.current.cloud}</td>
                                                         </tr>`
-
+       
     })
+    foreWeather();
 }
+
+function foreWeather(){
+ let forTblBody ="";
+    document.getElementById("forecastTbl").innerHTML = forTblBody;  
+
+    d=0;
+    for(let i=0;i<5;i++){
+        fetch(` https://api.weatherapi.com/v1//forecast.json?key=${key}&q=${loc}&dt=${loDate.getFullYear()+"-"+(loDate.getMonth()+1)+"-"+(loDate.getDate()+i)}`)
+        .then(res=>res.json())
+        .then(obj => {
+            forTblBody += `<div class="col-4 m-2" style="    background-color: rgba(159, 165, 171, 0.951);>
+                                <h3  class="fw-bold">${loDate.getFullYear()+"-"+(loDate.getMonth()+1)+"-"+(loDate.getDate()+i)}</h3>
+                                <h2 >${obj.current.condition.text}</h2>
+                                <img src="${obj.current.condition.icon}" alt="" width="100px">
+                                <h5 >${obj.current.temp_c+" °C"}</h5>
+                                <h5 >wind speed <br> ${obj.current.wind_kph} kph</h5>
+                            </div>`
+            document.getElementById("forecastTbl").innerHTML += forTblBody;  
+
+        })
+    }
+}
+
+
+
 function setLocation(){
     if(document.getElementById("txtSearch").value ==""){
         loc = "Galle"
