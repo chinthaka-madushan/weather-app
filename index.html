@@ -22,10 +22,10 @@
     <nav>
         <div class="nav_input">
             <input id="txtInput"  type="text" value="">
-            <input id="btnInput"  type="button" value="Search City">
+            <input onclick="getWeather();" id="btnInput"  type="button" value="Search City">
         </div>
-        <div style="background-color: rgba(0,0,0,0.2); width: 40px; text-align: center;">
-            <label id="" style="position: relative; top: 8px;"><img width="20px" src="icon/light.png" alt=""></label>
+        <div class="lamp" >
+            <label id="lamp_img" ><img onclick="colorMood();" id="img_light" width="20px" src="icon/light.png" alt=""> <img onclick="colorMood();" id="img_dark" width="20px" src="icon/dark.png" alt=""></label>
         </div>
     </nav>
 
@@ -130,6 +130,18 @@
         </div>
     </div>
 
+    <!-- week weather -->
+    <hr>
+    <h1 style="text-align: center;  color: #cad3db; font-size: 25px; font-weight: 800; ">Week Weather</h1>
+    <div class="week_box">
+        <div class="week_day"></div>
+        <div class="week_day"></div>
+        <div class="week_day"></div>
+        <div class="week_day"></div>
+        <div class="week_day"></div>
+        <div class="week_day"></div>
+        <div class="week_day"></div>
+    </div>
 
     <!-- link js -->
     <script src="app.js"></script>

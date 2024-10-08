@@ -40,6 +40,7 @@ nav {
 }
 #btnInput:hover{
     background-color: #39a4eb; 
+    cursor: pointer;
 }
 #txtInput:hover{
     background-color:  #0e464b; 
@@ -51,6 +52,23 @@ nav {
     border: none ; 
     border-radius: 5px ; 
     height: 25px;
+}
+.lamp{
+    background-color: rgba(0,0,0,0.2); 
+    width: 30px; 
+    text-align: center;
+    align-items: center;
+   
+}
+.lamp:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+#lamp_img :hover{
+    cursor: pointer;
+}
+#lamp_img{
+    position: relative; 
+    top: 8px;
 }
 
 /*======================*\
@@ -88,6 +106,7 @@ nav {
     margin-top: 10px;
     padding-bottom: 10px;
     width: 99%;
+    margin-bottom: 10px;
 }
 .live_hed{
     font-size: 20px;
@@ -119,6 +138,21 @@ nav {
     margin: 2px;
     width: 100px;
     height: 70px;
+}
+
+/*======================*\
+    week weater
+\*======================*/
+.week_box{
+    width: 99%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.week_day{
+    min-width: 170px;
+    height: 300px;
+    margin: 5px;
 }
 
 /* back ground animation*/
