@@ -11,6 +11,12 @@ body {
     background-color: var(--backgroud-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+div {
+    background-color:rgba(34, 166, 179,0.9);
+    border-radius: 8px;
+    box-shadow: 10px 10px 50px var(--font-color-dark);
+}
+
 /*======================*\
     nav bar
 \*======================*/
@@ -46,18 +52,14 @@ nav {
     border-radius: 5px ; 
     height: 25px;
 }
-div {
-    background-color: var(--body-color);
-    border-radius: 8px;
-    box-shadow: 10px 10px 50px var(--font-color-dark);
-}
 
 /*======================*\
     Welcome
 \*======================*/
 
 .welcome_box {
-    width: 100%;
+    margin: auto;
+    width: 99%;
     height: 70px;
 }
 
@@ -77,11 +79,49 @@ div {
     right: 15px;
     color: var(--font-color-dark);
 }
+/*======================*\
+    live weater
+\*======================*/
 
+.live_box{
+    margin: auto;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 99%;
+}
+.live_hed{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--font-color-dark);
+    position: relative;
+    left: 10px;
+}
+.live_box_1{
+    position: relative;
+    top: 8px;
+    left: 8px;
+    background-color: var(--card-m-color);
+    box-shadow: 1px 1px 50px var(--font-color-dark);
+    min-width: 400px;
+    width: 50%; 
+    height: 400px;
+}
+.day_box{
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.day{
+    border-radius: 6px;
+    margin: 2px;
+    width: 100px;
+    height: 70px;
+}
 
 /* back ground animation*/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
-
 .hero {
     position: absolute;
     height: 100vh;
