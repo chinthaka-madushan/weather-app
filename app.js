@@ -30,5 +30,11 @@ function setLocation(){
         loc = document.getElementById("txtInput").value;
     }
 }
+    //-------------------------set local time
+setInterval(updateTime,1000);
+function updateTime(){
+    const tme = new Date();
+    document.getElementById("Welcome_time").textContent = tme.toLocaleTimeString();
+}
 
 
