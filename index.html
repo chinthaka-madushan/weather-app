@@ -20,10 +20,15 @@
 
     <!-- nav bar-->
     <nav>
-        <div class="nav_input">
-            <input id="txtInput"  type="text" value="">
-            <input onclick="getWeather();" id="btnInput"  type="button" value="Search City">
+        <div class="nav_input">    
+            <ul class="suggess" id="suggess">
+                
+                
+            </ul>
+            <input id="txtInput"  type="text" value="" onkeyup="suggestion()">
+            <input onclick="getWeather();" id="btnInput"  type="button" value="Search City">            
         </div>
+        
         <div class="lamp" >
             <label id="lamp_img" ><img onclick="colorMood();" id="img_light" width="20px" src="icon/light.png" alt=""> <img onclick="colorMood();" id="img_dark" width="20px" src="icon/dark.png" alt=""></label>
         </div>
@@ -42,91 +47,97 @@
     <!-- welcome box -->
     <div class="welcome_box">
         <p style="margin-left: 15px; padding-top: 5px;"><img style="vertical-align: middle;" src="icon/resalt.svg" alt=""> Resalt for</p>
-        <label id="Welcome_lbl">Thellambura</label>
+        <label id="weatherLocation" class="Welcome_lbl">Default</label>
+        <label id="weatherCountry" class="Welcome_lbl" style="font-size: 13px; color:  rgb(6, 73, 17);"></label>
         <h1 id="Welcome_time"></h1>
     </div>
 
     <!-- live weather box -->
     <div class="live_box">
         <label class="live_hed">Current Weather</label>
+        <label id="lastUpdated" class="live_hed" style="font-size: 15px; font-weight: 400;">last updated</label>
         <div class="live_box_1">
-
+            <label id="txt_weather_condition"></label>
+            <br>
+            <div style=" background-color: rgba(44, 62, 80,.7); text-align: center; width: 150px; margin-left: 20px; margin-top: 15px; height: 130px; ">
+                <img id="img_weather_condition"  src="" alt="">
+            </div>
+            <table id="weather_tbl"></table>
         </div>
         <label style="position: relative; top: 10px; left: 10px;  color: #2c3e50; font-size: 25px; font-weight: 700; ">Forecast</label>
         <div class="day_box">
-            <div class="day">
+            <div id="day_1" class="day">
+                
+            </div>
+            <div id="day_2" class="day" >
 
             </div>
-            <div class="day">
+            <div id="day_3" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_4" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_5" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_6" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_7" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_8" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_9" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_10" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_11" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_12" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_13" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_14" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_15" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_16" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_17" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_18" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_19" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_20" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_21" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_22" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_23" class="day">
 
             </div>
-            <div class="day">
+            <div id="day_24" class="day">
 
             </div>
-            <div class="day">
-
-            </div>
-            
         </div>
     </div>
 
