@@ -120,8 +120,8 @@ function updateTime() {
 }
 
 //===================================week weather
-function weekWeather() {
-    fetch(` https://api.weatherapi.com/v1//forecast.json?key=${key}&q=${loc}`)
-        .then(res => res.json())
-        .then
-}
+// function weekWeather() {
+//     fetch(` https://api.weatherapi.com/v1//forecast.json?key=${key}&q=${loc}`)
+//         .then(res => res.json())
+//         .then
+// }
